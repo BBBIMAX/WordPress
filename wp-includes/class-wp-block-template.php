@@ -11,6 +11,7 @@
  *
  * @since 5.8.0
  */
+#[AllowDynamicProperties]
 class WP_Block_Template {
 
 	/**
@@ -38,7 +39,7 @@ class WP_Block_Template {
 	public $slug;
 
 	/**
-	 * Id.
+	 * ID.
 	 *
 	 * @since 5.8.0
 	 * @var string
@@ -83,15 +84,15 @@ class WP_Block_Template {
 	 * 'custom'.
 	 *
 	 * @since 5.9.0
-	 * @var string
+	 * @var string|null
 	 */
 	public $origin;
 
 	/**
-	 * Post Id.
+	 * Post ID.
 	 *
 	 * @since 5.8.0
-	 * @var integer|null
+	 * @var int|null
 	 */
 	public $wp_id;
 
@@ -126,7 +127,31 @@ class WP_Block_Template {
 	 * A value of 0 means no author.
 	 *
 	 * @since 5.9.0
-	 * @var int
+	 * @var int|null
 	 */
 	public $author;
+
+	/**
+	 * Post types.
+	 *
+	 * @since 5.9.0
+	 * @var string[]|null
+	 */
+	public $post_types;
+
+	/**
+	 * Area.
+	 *
+	 * @since 5.9.0
+	 * @var string|null
+	 */
+	public $area;
+
+	/**
+	 * Modified.
+	 *
+	 * @since 6.3.0
+	 * @var string|null
+	 */
+	public $modified;
 }
